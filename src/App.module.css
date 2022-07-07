@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+.margin{
+  margin:10vh 20vw;
+}
+
+*{
+  font-family: Fira Code;
+}
+
+@media only screen and (max-width: 600px) {
+  .margin {
+    margin:2vh 5vw;
+  }
+}

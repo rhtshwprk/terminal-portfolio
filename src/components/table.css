@@ -1,0 +1,17 @@
+.a {
+    display: table-row;
+}
+
+.a div {
+    display: table-cell;
+}
+
+.green{
+    color:green;
+    font-weight: 600;
+}
+
+a{
+    color:black;
+    font-weight: 600;
+}
