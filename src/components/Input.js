@@ -22,7 +22,7 @@ const Input = () => {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      const cmd = event.target.value;
+      const cmd = event.target.value.trim();
       const cmdLower = cmd.toLowerCase();
       if (cmdLower === "clr") {
         setHistory("");
