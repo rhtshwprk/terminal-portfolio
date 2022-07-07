@@ -20,18 +20,18 @@ const Command = (command) => {
   const projects = [
     [
       "ministore",
-      "https://devpost.com/software/ministore-build-your-store-under-5-mins",
+      "https://github.com/rhtshwprk/ministore",
       "a mobile-first webapp to create an e-commerce store in 5 minutes. [undergoing huge update]",
     ],
 
     [
       "finschool",
-      "https://devpost.com/software/finschool",
+      "https://github.com/rhtshwprk/wheres-my-money",
       "fintech app that turns learning personal finance a fun process.",
     ],
     [
       "terminal portfolio",
-      "",
+      "https://github.com/rhtshwprk/terminal-portfolio",
       "interactive console portfolio website. you're on it rn.",
     ],
     [
@@ -66,6 +66,8 @@ const Command = (command) => {
     return ``;
   } else if (command === "exit") {
     return `clearing the stack...`;
+  } else if (command === "gui") {
+    return `<div>under construction...</div></br>`;
   }
   return '<div style= "color:red">Command not found. Type "help" to list available commands</div></br>';
 };
