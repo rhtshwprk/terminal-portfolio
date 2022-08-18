@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
-
 * {
-  font-family: "Fira Code";
+  font-family: "Fira Code",  monospace;
 }
 
 body {
@@ -11,17 +8,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --background: white;
-  --text-primary: black;
-  --text-secondary: royalblue;
-  --accent: green;
-  --error: red;
-}
-[data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
-  --text-secondary: royalblue;
-  --accent: green;
-  --error:red;
-}

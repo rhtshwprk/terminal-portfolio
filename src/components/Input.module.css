@@ -2,7 +2,6 @@
     outline:none;
     border:0px solid;
     font-size: 16px;
-    font-family:Fira Code;
     /* width:100%; */
     padding:0;
 
@@ -10,7 +9,6 @@
 .console{
     white-space: pre-wrap;
     overflow: hidden;
-    font-family:Fira Code;
 }
 
 .label{
@@ -18,8 +16,7 @@
     color:purple;
     font-weight:600 ;
 }
-h2{
-    font-family: Fira Code;
+h1{
     font-weight:700;
     font-size:40px;    
 }

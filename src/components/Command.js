@@ -27,7 +27,7 @@ const Command = (command) => {
     [
       "finschool",
       "https://github.com/rhtshwprk/wheres-my-money",
-      "fintech app that turns learning personal finance a fun process.",
+      "fintech app that turns learning personal finance into a fun process.",
     ],
     [
       "terminal portfolio",
@@ -41,17 +41,17 @@ const Command = (command) => {
     ],
   ];
   const help_html = help_data.map(
-    (command) =>
-      `<div class='a'><div class='green'> ${command[0]} </div><div>${command[1]}</div></div>`
+    (data) =>
+      `<div class='a'><div class='green'> ${data[0]} </div><div>${data[1]}</div></div>`
   );
   const whoami_html = whoami.map(
-    (command) =>
-      `<div class='a'><div class='green'> ${command[0]} </div><div>${command[1]}</div></div>`
+    (data) =>
+      `<div class='a'><div class='green'> ${data[0]} </div><div>${data[1]}</div></div>`
   );
 
   const projects_html = projects.map(
-    (command) =>
-      `<a target='_blank' href="${command[1]}">${command[0]}</a><span>: ${command[2]}</span></br>`
+    (data) =>
+      `<a target='_blank' href="${data[1]}">${data[0]}</a><span>: ${data[2]}</span></br>`
   );
 
   if (command === "help") {
