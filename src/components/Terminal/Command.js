@@ -41,11 +41,11 @@ const projects = [
 ];
 const help_html = help_data.map(
   (data) =>
-    `<div class='a'><div class='green'> ${data[0]} </div><div>${data[1]}</div></div>`
+    `<div class='a'><div class='green table-header'> ${data[0]} </div><div>${data[1]}</div></div>`
 );
 const whoami_html = whoami.map(
   (data) =>
-    `<div class='a'><div class='green'> ${data[0]} </div><div>${data[1]}</div></div>`
+    `<div class='a'><div class='green table-header'> ${data[0]} </div><div>${data[1]}</div></div>`
 );
 const projects_html = projects.map(
   (data) =>
@@ -61,7 +61,7 @@ const Command = (command) => {
       return `${whoami_html.join("")}</br>`;
 
     case "help":
-      return `<div class="top"><div style="color:green">available commands: </div>${help_html.join(
+      return `<div class="top"><div>available commands: </div>${help_html.join(
         ""
       )}</br>`;
 
@@ -75,7 +75,7 @@ const Command = (command) => {
       return "";
 
     default:
-      return '<div style= "color:red">Command not found. Type "help" to list available commands</div></br>';
+      return '<div class="error"  >Command not found. Type "help" to list available commands</div></br>';
   }
 };
 
