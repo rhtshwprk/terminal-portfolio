@@ -14,7 +14,7 @@ const whoami = [
   ["location:", "kolkata, india"],
   ["languages:", "[javascript, python, c++]"],
   ["hobbies:", "reading, e-sports"],
-  ["last update:", "07-07-2022"],
+  ["last update:", "21-08-2022"],
 ];
 const projects = [
   [
