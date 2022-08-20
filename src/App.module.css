@@ -1,7 +1,9 @@
 .margin{
   margin:10vh 20vw;
 }
-
+body, html{
+  overflow: auto;
+}
 *{
   font-family: "Fira Code", monospace;
 }

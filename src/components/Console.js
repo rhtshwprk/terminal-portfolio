@@ -9,6 +9,7 @@ const Console = () => {
   const [input, setInput] = useState("");
   const [cat, changeCat] = useState(0);
   const [catURL, changeCatURL] = useState("");
+  //Fetch Cat image, when cat is changed
 
   useEffect(() => {
     fetch("https://api.thecatapi.com/v1/images/search")
@@ -16,9 +17,6 @@ const Console = () => {
       .then((data) => changeCatURL(data[0].url))
       .then((response) => console.log(response));
   }, [cat]);
-  const commandSubmitHandler = (event) => {
-    event.preventDefault();
-  };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
@@ -48,17 +46,25 @@ const Console = () => {
             '<span style="color:purple;font-weight:600">rpk.dev: ~$ </span>' +
             cmd +
             "</br>" +
-            Command(cmdLower)
+            output
         );
       }
       setInput("");
+      const lastEl = document.getElementById("lastElement");
+      console.log(lastEl);
+      setTimeout(() => {
+        lastEl.scrollIntoView({
+          // behavior: "smooth",
+        });
+      }, 0);
+      // window.scrollTo(0, document.body.scrollHeight);
     }
   };
 
   return (
-    <React.Fragment>
+    <div>
       <h1>rhtshwprk.dev</h1>
-      <div className={`${styles.console} scrollStopper`}>
+      <div className={`${styles.console}`}>
         <div className={styles.content}>
           Welcome to the interactive console. Enter command:
         </div>
@@ -67,18 +73,16 @@ const Console = () => {
           dangerouslySetInnerHTML={{ __html: history }}
         />
         {/* {history} */}
-        <form onSubmit={commandSubmitHandler}>
-          <label className={styles.label}>rpk.dev: ~$ </label>
-          <input
-            autoFocus
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            className={styles.input}
-          ></input>
-        </form>
+        <label className={styles.label}>rpk.dev: ~$ </label>
+        <input
+          autoFocus
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={handleKeyPress}
+          className={styles.input}
+        ></input>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
