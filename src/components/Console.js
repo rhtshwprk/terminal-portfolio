@@ -24,6 +24,9 @@ const Console = () => {
     if (event.key === "Enter") {
       const cmd = event.target.value.trim();
       const cmdLower = cmd.toLowerCase();
+
+      const output = Command(cmdLower);
+
       if (cmdLower === "clr") {
         setHistory("");
       } else if (cmdLower === "exit") {
