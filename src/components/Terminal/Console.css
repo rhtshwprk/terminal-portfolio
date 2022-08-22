@@ -22,7 +22,7 @@ body{
     /* width:100%; */
     padding:0;
     color:var(--primary);
-
+ 
 }
 .primary{
     color:var(--primary);
@@ -70,16 +70,16 @@ h1{
 }
 
 .green{
-    color:#01a252;
+    color:var(--success);
 }
 .error{
-    color:#db2d20;
+    color:var(--error);
 }
 .table-header{
     font-weight: 600;
 }
 
 a{
-    color:black;
+    color:var(--primary);
     font-weight: 600;
 }

@@ -5,7 +5,7 @@ import Resume from "../../resume.pdf";
 import { colorThemes } from "./color-themes";
 
 const Console = () => {
-  const [colorTheme, setColorTheme] = useState(colorThemes.dark);
+  const [colorTheme, setColorTheme] = useState(colorThemes.nightOwl);
 
   let root = document.documentElement;
   root.style.setProperty("--background", colorTheme.backgroundColor);
@@ -37,20 +37,36 @@ const Console = () => {
         setHistory("");
       } else if (cmdLower.split(" ")[0] === "theme") {
         if (cmdLower.split(" ")[1] === "0") {
-          setColorTheme(colorThemes.light);
+          setColorTheme(colorThemes.material);
           setHistory(
             history +
               `<span class="label">rpk.dev: ~$ </span>` +
               cmd +
-              "</br></br>"
+              `</br><span>Theme: [0] Material Light</span></br></br>`
           );
         } else if (cmdLower.split(" ")[1] === "1") {
-          setColorTheme(colorThemes.dark);
+          setColorTheme(colorThemes.nightOwl);
           setHistory(
             history +
               `<span class="label">rpk.dev: ~$ </span>` +
               cmd +
-              "</br></br>"
+              `</br><span>Theme: [1] Night Owl</span></br></br>`
+          );
+        } else if (cmdLower.split(" ")[1] === "2") {
+          setColorTheme(colorThemes.ayu);
+          setHistory(
+            history +
+              `<span class="label">rpk.dev: ~$ </span>` +
+              cmd +
+              `</br><span>Theme: [2] Ayu Dark</span></br></br>`
+          );
+        } else if (cmdLower.split(" ")[1] === "3") {
+          setColorTheme(colorThemes.solarized);
+          setHistory(
+            history +
+              `<span class="label">rpk.dev: ~$ </span>` +
+              cmd +
+              `</br><span>Theme: [3] Ubuntu Theme</span></br></br>`
           );
         } else {
           setHistory(
@@ -59,7 +75,7 @@ const Console = () => {
               cmd +
               `</br><div class="error">${
                 cmdLower.split(" ")[1]
-              } is not a valid argument. Valid arguments include <span class="primary">[0,1]</span></div></br>`
+              } is not a valid argument. Valid arguments include <span class="primary">[0,1,2,3]</span></div></br>`
           );
         }
       } else if (cmdLower === "exit") {
