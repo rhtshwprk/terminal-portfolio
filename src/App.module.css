@@ -1,15 +1,5 @@
-.margin{
-  margin:10vh 20vw;
-}
+
 body, html{
   overflow: auto;
 }
-*{
-  font-family: "Fira Code", monospace;
-}
 
-@media only screen and (max-width: 600px) {
-  .margin {
-    margin:2vh 5vw;
-  }
-}
